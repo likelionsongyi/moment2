@@ -6,7 +6,7 @@
   <nav class="navbarbg navbar-fixed">
     <div class="nav-wrapper">
       <div class="navbarcl">
-      <a href="/" class="brand-logo white-text">로고</a>
+      <a href="/" class="brand-logo white-text"><img src="/moment_logo.png" width="120" height="64"></a>
       <ul class="hide-on-med-and-down right">
       </ui>
     </div>
@@ -20,8 +20,9 @@
         <!--  <img src="images/m.ico">-->
         <!--</div>-->
           <a href="/profile/mypage/<%=current_user.id%>"><img class="circle-song" src="<%= @info.try("image_url") %>"></a>
-          <a href="#"><span class="white-text name"><%= current_user.name %></span></a>
-          <a href="#email"><span class="white-text email"><%= current_user.email%></span></a>
+          <br>
+          <a href="#"><span class="black-text email"><%= current_user.name %></span></a>
+          <a href="#email"><span class="black-text email"><%= current_user.email%></span></a>
         </div>
       </li>
         <li><div class="divider"></div></li>
@@ -80,6 +81,7 @@
    
   <!-- Post List Table -->
     <div class="container">
+      <a href="/posts/intro">인트로페이지</a>
     </div>
   
   <div class="box-container">
