@@ -31,6 +31,12 @@
         
     end
     
+    def list
+        @user = User.find(params[:user_id])
+        @follows = current_user.followers_by_type('User')
+        @followings = current_user.following_users('User')
+    end
+    
     def follow
         @user = User.find(params[:user_id])
         current_user.follow(@user)

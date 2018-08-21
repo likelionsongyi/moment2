@@ -18,6 +18,7 @@ class PostsController < ApplicationController
       format.json
       if params[:search]
         @search_user = User.search(params[:search]).order("created_at DESC")
+        puts @search_user
           format.js
       else
         @search_user = User.all.order('created_at DESC')

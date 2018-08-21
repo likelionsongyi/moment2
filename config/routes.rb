@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post 'profile/follow/:user_id' => 'profile#follow'
   post 'profile/unfollow/:user_id' => 'profile#unfollow'
   get 'profile/:user_id/ingame' => 'profile#ingame'
+  get 'profile/:user_id/list' => 'profile#list'
   resources :profile
   
   get 'board/:id' => 'board#index'

@@ -1,0 +1,9 @@
+<%= current_user.name %>가 팔로우 하는 사람들
+<br>
+<% current_user.followers_by_type('User').each do |f|%>
+    <%= User.find(f.id).name %>
+<% end %>이 나를 팔로우 합니다.
+<br><br><br>
+<% current_user.following_by_type('User').each do |f|%> 
+    <%= User.find(f.id).name %>
+<% end %>을 내가 팔로우 합니다.

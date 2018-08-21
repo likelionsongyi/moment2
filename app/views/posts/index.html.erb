@@ -1,6 +1,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+<<<<<<< HEAD
 <body>  
   <!-- 네브바 시작 -->
   <div class="navbarcl">
@@ -67,6 +68,70 @@
         </div>
         </div>
       <!--여기까지검색-->
+=======
+  
+<!-- 네브바 시작 -->
+<nav class="navbarbg">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo white-text">로고</a>
+    <ul class="hide-on-med-and-down right">
+    </ui>
+</nav>
+
+  <!--사이드 네브바 넣을 자리-->
+  <ul id="slide-out" class="sidenav">
+      <!--여기부터 유저 프로필-->
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#"><span class="white-text name"><%= current_user.name %></span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+      <li><div class="divider"></div></li>
+    <!--여기까지 유저 프로필-->
+    <li><a href="/profile/mypage/<%=current_user.id%>"><i class="material-icons">cloud</i>MyPage</a></li>
+    <li>
+      <% if user_signed_in?%>
+      <%= link_to "로그아웃", destroy_user_session_path, method: :delete%>
+      <% else %>
+      <%= link_to "로그인", new_user_session_path%>
+      <% end%>
+    </li>
+            <!------ 검색 ------->
+    <li><a href="#search" class="modal-trigger"><i class="material-icons">search</i></a>
+      <div id="search" class="modal">
+      <div class="modal-content center">
+        <h2>친구찾기</h2>
+        <%= form_tag("/", :method => "get", id: "search-form", remote: true) do %>
+        <%= text_field_tag :search, params[:search], placeholder: "유저 검색", :class => 'white-text' %>
+        <%= submit_tag "Search"%>
+        <% end %>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>이름</th>
+              <th>페이지</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody id="searchtable">
+            <%= render 'searchtable', search_user: @search_user %>
+          </tbody>
+        </table>
+      <div></div></li>
+      <!--검색 끝 -->
+      <li><a href="javascript:void(0);" onclick="toggleFullScreen()"><i class="material-icons toggle-fullscreen">settings_overscan</i></a></li>
+      <!--<li><a href=""><i class="material-icons">people_outline</i></a></li>-->
+      <!--<li><a href=""><i class="material-icons">notifications_none</i></a></li>-->
+      <li><a href="/profile/mypage/<%=current_user.id%>"><i class="material-icons">accessibility</i></a></li>
+  </div>
+
+<!--여기까지검색-->
+>>>>>>> 2ca5a1898b5b5ba862f78fb51c747c36fb152d5b
       <li><div class="divider"></div></li>
         <li><a class="subheader">모먼트는 사랑입니다</a></li>
       <!--<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
@@ -153,13 +218,9 @@
 </footer>
 
 <script>
-
 </script>
 
 <style>
-
-
-
   body {
     background-color: #FAFAFA;
   }
@@ -168,7 +229,6 @@
     background: none;
   }
   
-
   .box-container {
     text-align: center;
   }
