@@ -3,14 +3,15 @@
 </head>
 <body>  
   <!-- 네브바 시작 -->
+  <div class="navbarcl">
   <nav class="navbarbg navbar-fixed">
     <div class="nav-wrapper">
-      <div class="navbarcl">
       <a href="/" class="brand-logo white-text"><img src="/moment_logo.png" width="120" height="64"></a>
       <ul class="hide-on-med-and-down right">
       </ui>
     </div>
   </nav>
+  </div>
     <!--사이드 네브바 넣을 자리-->
     <ul id="slide-out" class="sidenav">
         <!--여기부터 유저 프로필-->
@@ -267,11 +268,13 @@
   }
   
   .navbarcl {
-    background-color: #84CFF4;
+    position:fixed;
+    background-color: #84CFF4 !important;
+    
   }
   .sidenav-song{
     position:fixed;
-    top:50%;
-    bottom:50%;
+    top:10%;
+    bottom:90%;
   }
 </style>

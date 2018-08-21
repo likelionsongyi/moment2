@@ -17,10 +17,11 @@
 }
 
 .login_box
-{
-    border: 6px solid #000000;
+{   border: 6px solid #000000;
     padding: 50px;
-    float: right;
+    // float: right;
+    top:3em;
+    right:3em;
     border-radius: 15px;
     background-color: #B5E0F8;
     grid-col-start: 9;
